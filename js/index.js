@@ -1,48 +1,12 @@
 $(document).ready(function(){
-	jQuery.cookie = function(name, value, options) {
-	    if (typeof value != 'undefined') { // name and value given, set cookie
-	        options = options || {};
-	        if (value === null) {
-	            value = '';
-	            options.expires = -1;
-	        }
-	        var expires = '';
-	        if (options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
-	            var date;
-	            if (typeof options.expires == 'number') {
-	                date = new Date();
-	                date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
-	            } else {
-	                date = options.expires;
-	            }
-	            expires = '; expires=' + date.toUTCString(); // use expires attribute, max-age is not supported by IE
-	        }
-	        var path = options.path ? '; path=' + options.path : '';
-	        var domain = options.domain ? '; domain=' + options.domain : '';
-	        var secure = options.secure ? '; secure' : '';
-	        document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
-	    } else { // only name given, get cookie
-	        var cookieValue = null;
-	        if (document.cookie && document.cookie != '') {
-	            var cookies = document.cookie.split(';');
-	            for (var i = 0; i < cookies.length; i++) {
-	                var cookie = jQuery.trim(cookies[i]);
-	                // Does this cookie string begin with the name we want?
-	                if (cookie.substring(0, name.length + 1) == (name + '=')) {
-	                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-	                    break;
-	                }
-	            }
-	        }
-	        return cookieValue;
-	    }
-	}
-
-	var api = "http://api.yc.peij.cn/";
 	var shouji = "";
 	var yzms = "";
 	var password ="";
 	var chengshi = 0;
+
+	if ($.getUrlParam("cid")) {
+		chengshi = $.getUrlParam("cid");
+	};
 
 	// 首页最上方广告图片
 	$.ajax({
@@ -65,28 +29,14 @@ $(document).ready(function(){
 		}
 	})
 
-	
+	// $(".fc-left li").click(function() {
+	// 	chengshi = $(this).children("input").val();
+	// });
 
 	// 左边导航加载
-	$.ajax({
-		url: api + 'wap/v1/activities',
-		type: 'GET',
-		dataType: 'json',
-		success: function (data){
-			if(data.code && data.code != 0){
-				alert(data.error.msg);
-			}else{
-				if(data.ads){
-					$(".tus_gg").attr("src",data.ads.img);
-				}else{
-					$(".tus_gg").parents(".top-tu").css("display","none");
-				}
-			}
-		},
-		error: function (xhr){
-			httpErrorCallback(xhr);
-		}
-	})
+	getListByCityCode(chengshi);
+
+
 	
 	// 点击信息以后右边出现
 	$(".xx").click(function(){
@@ -102,7 +52,6 @@ $(document).ready(function(){
 			$(".dl").fadeIn(700);
 			$(".dls").fadeIn(700);
 		}
-		
 	})
 
 	// 选择完右边以后，消失右边
@@ -172,14 +121,6 @@ $(document).ready(function(){
 		}
 	})
 
-	// 点击男女效果
-	$(".xz-on").click(function() {
-		$(".xz-on").css("display","inline");
-		$(".xz-ok").css("display","none");
-		$(this).css("display","none");
-		$(this).next().css("display","inline");
-	});
-
 	// 点击预约效果
 	$(".gr-yy-anniu").click(function() {
 		$(".dl").fadeIn(700);
@@ -187,11 +128,11 @@ $(document).ready(function(){
 	})
 
 	// 鼠标移动的效果
-	$(".n-li").mouseover(function() {
+		$(".by-ul").on("mouseover",".n-li",function(){
 		$(this).children().children().next(".sy-neirong").fadeIn(700);
 	})
 
-	$(".n-li").mouseleave(function(){
+	$(".by-ul").on("mouseleave",".n-li",function(){
 		$(this).children().children().next(".sy-neirong").fadeOut(700); 
 	})
 
@@ -282,16 +223,48 @@ $(document).ready(function(){
 		})
 	})
 	
-	function httpErrorCallback (xhr) {
-		if (xhr.status==400) {
-				alert(xhr.responseJSON.error);
-		}else if(xhr.status==500){
-			alert("系统错误");
-		}else if(xhr.status==401){
-			alert("您还未登录");
-		}else if(xhr.status==404){
-			alert("找不到请求地址");
+
+
+	function getListByCityCode(code){
+		$.ajax({
+			url: api + 'wap/v1/activities',
+			type: 'GET',
+			dataType: 'json',
+			data:{
+				area_id: code
+		},
+		success: function (data){
+			if(data.code && data.code != 0){
+				alert(data.error.msg);
+			}else{
+				$.each($(".by-ul").children(), function(index, val) {
+					 /* iterate through array or object */
+					 if (index>0) {
+					 	val.remove();
+					 };
+				});
+				$.each(data.activity_list, function(index, val) {
+					$(".by-ul").append('<li class="n-li">'
+							+'<a href="indexgr.html?id='+val.activity_id+'">'
+								+'<img class="tus" src="'+val.photo+'"/>'
+								+'<div class="sy-neirong">'
+									+'<div class="sy-neirongs">'
+										+'<img src="'+val.avatar+'"/>'
+										+'<p class="sy-name">'+val.name+'</p>'
+										+'<p class="sy-jibie">'+val.cook_rank+'</p>'
+										+'<p class="sy-jieshao">'+val.editor_note+'</p>'
+									+'</div>'
+								+'</div>'
+							+'</a>'
+						+'</li>'
+					);
+				});
+			}
+		},
+		error: function (xhr){
+			httpErrorCallback(xhr);
 		}
+	})
 	}
 
 });
