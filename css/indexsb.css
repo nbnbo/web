@@ -1,0 +1,987 @@
+*{
+	margin: 0px;
+	padding: 0px; 
+}
+
+body{
+	font-family:"Microsoft YaHei";
+}
+
+a:hover{
+	 text-decoration: none;
+}
+
+i{
+	font-style:normal
+}
+
+b{
+	font-weight:normal;
+}
+
+ul{
+	list-style:none; 
+}
+
+/*320*/
+@media (min-width: 1px) and (max-width: 359px){
+	body{
+		width: 320px;
+	}
+
+	.quan{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+	}
+	.quan-1{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		box-shadow: 1px -9px 16px;
+	}
+
+	.bd{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 40px;
+		background:#64524b;
+		padding: 10px;
+		z-index: 1;
+	}
+	
+	.cs{
+		float: left;
+		width: 30px;
+		height: 20px;
+	}
+
+	.xx{
+		float: right;
+		width: 20px;
+		height: 20px;
+	}
+
+	.name{
+		float: left;
+		width: 80%;
+		font-size: 22px;
+		color:#FFF;
+		margin-top: -7px;
+		text-align: center;
+	}
+
+	.by{
+		position: relative;
+		width: 100%;
+	}
+
+	.by-ul{
+		position: relative;
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	.by-ul li{
+		position: relative;
+		width: 100%;
+		display: table;
+		border-bottom: 1px solid #e6e6e6;
+		padding: 10px;
+	}
+
+	.fc-right{
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		width: 75%;
+		background:#FFF;
+		height: 100%;
+		display: none;
+	}
+
+	.fc-right-ul{
+		position: relative;
+		width: 100%;
+		padding: 10px;
+	}
+
+	.fc-right-ul li{
+		width: 100%;
+		border-bottom: 1px solid #e6e6e6;
+	}
+
+	.fr-t-li{
+		padding: 10px 0;
+		font-size: 18px;
+	}
+
+	.fr-li{
+		padding: 10px;
+	}
+
+	.fr-li a{
+		color:#747474;
+	}
+
+	.tc{
+		position: absolute;
+		bottom: 5%;
+		left: 32%;
+		color:#fe5d1f;
+		border: 1px solid #fe5d1f;
+		border-radius: 4px;
+		padding: 6px 24px;
+	}
+
+	.tc:hover{
+		color:#fe5d1f;
+	}
+
+	.fc-left{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 75%;
+		background:#FFF;
+		height: 100%;
+		display: none;  
+		padding: 10px;
+		padding-top: 0px;
+	}
+
+	.fc-left li{
+		width: 100%;
+		border-bottom: 1px solid #e6e6e6;
+		padding: 10px;
+	}
+
+	.fc-left li a{
+		color:#000;
+	}
+
+	.fc-left li a:hover{
+		color:#000;
+	}
+
+	.jian{
+		width: 5px;
+		height: 8px;
+		margin-left: 5px;
+		margin-top: -2px; 
+	}
+	.fc-left li .chen{
+		color:#ff5e1f;
+	}
+
+	.fc-left li .chen:hover{
+		color:#ff5e1f;
+	}
+
+	.shibai-img{
+		float: left;
+		width: 100px;
+		height: 100px;
+	}
+
+	.shibai-right{
+		float: right;
+		width: 63%;
+		margin-top: 13px;
+	}
+
+	.sb-jiage span{
+		float: right;
+		color:#fe5d1f;
+	}
+
+	.sb-jiage .sb-shibai{
+		width: 100px;
+		text-align: right;
+		background: url("../images/deng/gaitan.png")  no-repeat	;
+		background-size: 15px 15px;
+		background-position: 25px 3px;
+	}
+}
+/*320*/
+
+/*360*/
+@media (min-width: 360px) and (max-width: 374px){
+	body{
+		width: 360px;
+	}
+
+	.quan{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+	}
+
+	.quan-1{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		box-shadow: 1px -9px 16px;
+	}
+
+	.bd{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 40px;
+		background:#64524b;
+		padding: 10px;
+		z-index: 1;
+	}
+	
+	.cs{
+		float: left;
+		width: 30px;
+		height: 20px;
+	}
+
+	.xx{
+		float: right;
+		width: 20px;
+		height: 20px;
+	}
+
+	.name{
+		float: left;
+		width: 85%;
+		font-size: 22px;
+		color:#FFF;
+		margin-top: -7px;
+		text-align: center;
+	}
+
+	.by{
+		position: relative;
+		width: 100%;
+	}
+
+	.by-ul{
+		position: relative;
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	.by-ul li{
+		position: relative;
+		width: 100%;
+		display: table;
+		border-bottom: 1px solid #e6e6e6;
+		padding: 10px;
+	}
+
+	.top-tu .tus{
+		width: 100%;
+	}
+
+	.n-li .tus{
+		width: 100%;
+		padding: 10px;
+	}
+
+	.fc-right{
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		width: 75%;
+		background:#FFF;
+		height: 100%;
+		display: none;
+	}
+
+	.fc-right-ul{
+		position: relative;
+		width: 100%;
+		padding: 10px;
+	}
+
+	.fc-right-ul li{
+		width: 100%;
+		border-bottom: 1px solid #e6e6e6;
+	}
+
+	.fr-t-li{
+		padding: 10px 0;
+	}
+
+	.fr-li{
+		padding: 10px;
+	}
+
+	.fr-li a{
+		color:#747474;
+	}
+
+	.tc{
+		position: absolute;
+		bottom: 5%;
+		left: 32%;
+		color:#fe5d1f;
+		border: 1px solid #fe5d1f;
+		border-radius: 4px;
+		padding: 6px 24px;
+	}
+
+	.tc:hover{
+		color:#fe5d1f;
+	}
+
+	.fc-left{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 75%;
+		background:#FFF;
+		height: 100%;
+		display: none;  
+		padding: 10px;
+		padding-top: 0px;
+	}
+
+	.fc-left li{
+		width: 100%;
+		border-bottom: 1px solid #e6e6e6;
+		padding: 10px;
+	}
+
+	.fc-left li a{
+		color:#000;
+	}
+
+	.fc-left li a:hover{
+		color:#000;
+	}
+
+	.jian{
+		width: 5px;
+		height: 8px;
+		margin-left: 5px;
+		margin-top: -2px; 
+	}
+	.fc-left li .chen{
+		color:#ff5e1f;
+	}
+
+	.fc-left li .chen:hover{
+		color:#ff5e1f;
+	}
+
+	.shibai-img{
+		float: left;
+		width: 100px;
+		height: 100px;
+	}
+
+	.shibai-right{
+		float: right;
+		width: 63%;
+		margin-top: 13px;
+	}
+
+	.sb-jiage span{
+		float: right;
+		color:#fe5d1f;
+	}
+
+	.sb-jiage .sb-shibai{
+		width: 100px;
+		text-align: right;
+		background: url("../images/deng/gaitan.png")  no-repeat	;
+		background-size: 15px 15px;
+		background-position: 25px 3px;
+	}
+}
+/*360*/
+
+/*375*/
+@media (min-width: 375px) and (max-width: 383px){
+	body{
+		width: 375px;
+	}
+
+	.quan{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+	}
+	.quan-1{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		box-shadow: 1px -9px 16px;
+	}
+	.bd{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 40px;
+		background:#64524b;
+		padding: 10px;
+		z-index: 1;
+	}
+	
+	.cs{
+		float: left;
+		width: 30px;
+		height: 20px;
+	}
+
+	.xx{
+		float: right;
+		width: 20px;
+		height: 20px;
+	}
+
+	.name{
+		float: left;
+		width: 85%;
+		font-size: 22px;
+		color:#FFF;
+		margin-top: -7px;
+		text-align: center;
+	}
+
+	.by{
+		position: relative;
+		width: 100%;
+	}
+
+	.by-ul{
+		position: relative;
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	.by-ul li{
+		position: relative;
+		width: 100%;
+		display: table;
+		border-bottom: 1px solid #e6e6e6;
+		padding: 10px;
+	}
+
+	.top-tu .tus{
+		width: 100%;
+	}
+
+	.n-li .tus{
+		width: 100%;
+		padding: 10px;
+	}
+
+	.fc-right{
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		width: 75%;
+		background:#FFF;
+		height: 100%;
+		display: none;
+	}
+
+	.fc-right-ul{
+		position: relative;
+		width: 100%;
+		padding: 10px;
+	}
+
+	.fc-right-ul li{
+		width: 100%;
+		border-bottom: 1px solid #e6e6e6;
+	}
+
+	.fr-t-li{
+		padding: 10px 0;
+	}
+
+	.fr-li{
+		padding: 10px;
+	}
+
+	.fr-li a{
+		color:#747474;
+	}
+
+	.tc{
+		position: absolute;
+		bottom: 5%;
+		left: 32%;
+		color:#fe5d1f;
+		border: 1px solid #fe5d1f;
+		border-radius: 4px;
+		padding: 6px 24px;
+	}
+
+	.tc:hover{
+		color:#fe5d1f;
+	}
+
+	.fc-left{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 75%;
+		background:#FFF;
+		height: 100%;
+		display: none; 
+		padding: 10px;
+		padding-top: 0px;
+	}
+
+	.fc-left li{
+		width: 100%;
+		border-bottom: 1px solid #e6e6e6;
+		padding: 10px;
+	}
+
+	.fc-left li a{
+		color:#000;
+	}
+
+	.fc-left li a:hover{
+		color:#000;
+	}
+
+	.jian{
+		width: 5px;
+		height: 8px;
+		margin-left: 5px;
+		margin-top: -2px; 
+	}
+	.fc-left li .chen{
+		color:#ff5e1f;
+	}
+
+	.fc-left li .chen:hover{
+		color:#ff5e1f;
+	}
+
+	.shibai-img{
+		float: left;
+		width: 120px;
+		height: 120px;
+	}
+
+	.shibai-right{
+		float: right;
+		width: 63%;
+		margin-top: 16px;
+		font-size: 16px;
+	}
+
+	.sb-jiage span{
+		float: right;
+		color:#fe5d1f;
+	}
+
+	.sb-jiage .sb-shibai{
+		width: 100px;
+		text-align: right;
+		background: url("../images/deng/gaitan.png")  no-repeat	;
+		background-size: 17px 17px;
+		background-position: 15px 3px;
+	}
+}
+/*375*/
+
+/*384*/
+@media (min-width: 384px) and (max-width: 413px){
+	body{
+		width: 384px;
+	}
+
+	.quan{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+	}
+	.quan-1{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		box-shadow: 1px -9px 16px;
+	}
+	.bd{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 40px;
+		background:#64524b;
+		padding: 10px;
+		z-index: 1;
+	}
+	
+	.cs{
+		float: left;
+		width: 30px;
+		height: 20px;
+	}
+
+	.xx{
+		float: right;
+		width: 20px;
+		height: 20px;
+	}
+
+	.name{
+		float: left;
+		width: 85%;
+		font-size: 22px;
+		color:#FFF;
+		margin-top: -7px;
+		text-align: center;
+	}
+
+	.by{
+		position: relative;
+		width: 100%;
+	}
+
+	.by-ul{
+		position: relative;
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	.by-ul li{
+		position: relative;
+		width: 100%;
+		display: table;
+		border-bottom: 1px solid #e6e6e6;
+		padding: 10px;
+	}
+
+	.top-tu .tus{
+		width: 100%;
+	}
+
+	.n-li .tus{
+		width: 100%;
+		padding: 10px;
+	}
+
+	.fc-right{
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		width: 75%;
+		background:#FFF;
+		height: 100%;
+		display: none;
+	}
+
+	.fc-right-ul{
+		position: relative;
+		width: 100%;
+		padding: 10px;
+	}
+
+	.fc-right-ul li{
+		width: 100%;
+		border-bottom: 1px solid #e6e6e6;
+	}
+
+	.fr-t-li{
+		padding: 10px 0;
+	}
+
+	.fr-li{
+		padding: 10px;
+	}
+
+	.fr-li a{
+		color:#747474;
+	}
+
+	.tc{
+		position: absolute;
+		bottom: 5%;
+		left: 32%;
+		color:#fe5d1f;
+		border: 1px solid #fe5d1f;
+		border-radius: 4px;
+		padding: 6px 24px;
+	}
+
+	.tc:hover{
+		color:#fe5d1f;
+	}
+
+	.fc-left{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 75%;
+		background:#FFF;
+		height: 100%;
+		display: none; 
+		padding: 10px;
+		padding-top: 0px;
+	}
+
+	.fc-left li{
+		width: 100%;
+		border-bottom: 1px solid #e6e6e6;
+		padding: 10px;
+	}
+
+	.fc-left li a{
+		color:#000;
+	}
+
+	.fc-left li a:hover{
+		color:#000;
+	}
+
+	.jian{
+		width: 5px;
+		height: 8px;
+		margin-left: 5px;
+		margin-top: -2px; 
+	}
+	.fc-left li .chen{
+		color:#ff5e1f;
+	}
+
+	.fc-left li .chen:hover{
+		color:#ff5e1f;
+	}
+
+	.shibai-img{
+		float: left;
+		width: 120px;
+		height: 120px;
+	}
+
+	.shibai-right{
+		float: right;
+		width: 63%;
+		margin-top: 16px;
+		font-size: 16px;
+	}
+
+	.sb-jiage span{
+		float: right;
+		color:#fe5d1f;
+	}
+
+	.sb-jiage .sb-shibai{
+		width: 100px;
+		text-align: right;
+		background: url("../images/deng/gaitan.png")  no-repeat	;
+		background-size: 17px 17px;
+		background-position: 15px 3px;
+	}
+}
+/*384*/
+
+/*414*/
+@media (min-width: 414px){
+	body{
+		width: 414px;
+	}
+
+	.quan{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+	}
+	.quan-1{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		box-shadow: 1px -9px 16px;
+	}
+	.bd{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 40px;
+		background:#64524b;
+		padding: 10px;
+		z-index: 1;
+	}
+	
+	.cs{
+		float: left;
+		width: 30px;
+		height: 20px;
+	}
+
+	.xx{
+		float: right;
+		width: 20px;
+		height: 20px;
+	}
+
+	.name{
+		float: left;
+		width: 85%;
+		font-size: 22px;
+		color:#FFF;
+		margin-top: -7px;
+		text-align: center;
+	}
+
+	.by{
+		position: relative;
+		width: 100%;
+	}
+
+	.by-ul{
+		position: relative;
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	.by-ul li{
+		position: relative;
+		width: 100%;
+		display: table;
+		border-bottom: 1px solid #e6e6e6;
+		padding: 10px;
+	}
+
+	.top-tu .tus{
+		width: 100%;
+	}
+
+	.n-li .tus{
+		width: 100%;
+		padding: 10px;
+	}
+
+	.fc-right{
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		width: 75%;
+		background:#FFF;
+		height: 100%;
+		display: none;
+	}
+
+	.fc-right-ul{
+		position: relative;
+		width: 100%;
+		padding: 10px;
+	}
+
+	.fc-right-ul li{
+		width: 100%;
+		border-bottom: 1px solid #e6e6e6;
+	}
+
+	.fr-t-li{
+		padding: 10px 0;
+	}
+
+	.fr-li{
+		padding: 10px;
+	}
+
+	.fr-li a{
+		color:#747474;
+	}
+
+	.tc{
+		position: absolute;
+		bottom: 5%;
+		left: 32%;
+		color:#fe5d1f;
+		border: 1px solid #fe5d1f;
+		border-radius: 4px;
+		padding: 6px 24px;
+	}
+
+	.tc:hover{
+		color:#fe5d1f;
+	}
+
+	.fc-left{
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 75%;
+		background:#FFF;
+		height: 100%;
+		display: none; 
+		padding: 10px;
+		padding-top: 0px;
+	}
+
+	.fc-left li{
+		width: 100%;
+		border-bottom: 1px solid #e6e6e6;
+		padding: 10px;
+	}
+
+	.fc-left li a{
+		color:#000;
+	}
+
+	.fc-left li a:hover{
+		color:#000;
+	}
+
+	.jian{
+		width: 5px;
+		height: 8px;
+		margin-left: 5px;
+		margin-top: -2px; 
+	}
+	.fc-left li .chen{
+		color:#ff5e1f;
+	}
+
+	.fc-left li .chen:hover{
+		color:#ff5e1f;
+	}
+
+	.shibai-img{
+		float: left;
+		width: 140px;
+		height: 140px;
+	}
+
+	.shibai-right{
+		float: right;
+		width: 63%;
+		margin-top: 18px;
+		font-size: 18px;
+	}
+
+	.sb-jiage span{
+		float: right;
+		color:#fe5d1f;
+	}
+
+	.sb-jiage .sb-shibai{
+		width: 100px;
+		text-align: right;
+		background: url("../images/deng/gaitan.png")  no-repeat	;
+		background-size: 20px 20px;
+		background-position: 7px 5px;
+	}
+}
+/*414*/
