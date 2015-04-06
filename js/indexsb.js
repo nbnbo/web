@@ -16,7 +16,7 @@ $(document).ready(function(){
 				$.each(data.activity_list, function(index, val) {
 					 /* iterate through array or object */
 					 imgsTag += '<li class="n-li">'
-					 	+'<a href="indexgr.html?'+val.activity_id+'">'
+					 	+'<a href="indexgr.html?id='+val.activity_id+'">'
 							+'<img class="shibai-img" src="'+val.photo+'"/>'
 							+'<div class="shibai-right">'
 								+'<p class="sb-shijian">时间:'+val.activity_time+'</p>'
