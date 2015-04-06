@@ -88,7 +88,7 @@ $(document).ready(function(){
 				});
 				$.each(data.activity_list, function(index, val) {
 					$(".by-ul").append('<li class="n-li">'
-							+'<a href="indexgr.html?id='+val.activity_id+'">'
+							+'<a href="indexgr.html?id='+val.activity_id+'&cid='+chengshi+'">'
 								+'<img class="tus" src="'+val.photo+'"/>'
 								+'<div class="sy-neirong">'
 									+'<div class="sy-neirongs">'
