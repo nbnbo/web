@@ -279,4 +279,12 @@ $(document).ready(function(){
 		})
 		$(".fc-right").fadeOut(100);
 	})
+
+	// 点击退出那妞
+	$('.tc').click(function() {
+		$(".yuyue").fadeOut(700);
+		$(".dls").fadeOut(700);
+		$(".dl").fadeIn(700);
+		$(".fc-quxiao").fadeIn(700);
+	});
 });

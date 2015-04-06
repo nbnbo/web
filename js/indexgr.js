@@ -81,13 +81,6 @@ $(document).ready(function(){
 		}
 	})
 
-	$('.tc').click(function() {
-		$(".yuyue").fadeOut(700);
-		$(".dls").fadeOut(700);
-		$(".dl").fadeIn(700);
-		$(".fc-quxiao").fadeIn(700);
-	});
-
 	// 点击预约效果
 	$(".gr-yy-anniu").click(function() {
 		if($.cookie("yu_session_id") && $.cookie("yu_session_id").length > 0){
