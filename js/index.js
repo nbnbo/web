@@ -2,7 +2,7 @@ $(document).ready(function(){
 	var shouji = "";
 	var yzms = "";
 	var password ="";
-	var chengshi = 0;
+	// var chengshi = 0;
 
 	// 城市的按钮样式和图片
 	// if ($.getUrlParam("cid")) {
