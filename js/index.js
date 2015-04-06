@@ -4,10 +4,6 @@ $(document).ready(function(){
 	var password ="";
 	var chengshi = 0;
 
-	if ($.getUrlParam("cid")) {
-		chengshi = $.getUrlParam("cid");
-	};
-
 	// 首页最上方广告图片
 	$.ajax({
 		url: api + 'wap/v1/ads',
