@@ -302,4 +302,35 @@ $(document).ready(function(){
 		$(".dl").fadeIn(700);
 		$(".fc-quxiao").fadeIn(700);
 	})
+
+
+	// 城市的按钮样式和图片
+	if ($.getUrlParam("cid")) {
+		chengshi = $.getUrlParam("cid");
+	}else{
+		chengshi = 0;
+	}
+
+	if(chengshi == 0){
+		$(".cs2").children("a").removeClass("chen");
+		$(".cs2").children("a").children('img').attr("src","images/deng/jian-bai.jpg");
+		$(".cs3").children("a").removeClass("chen");
+		$(".cs3").children("a").children('img').attr("src","images/deng/jian-bai.jpg");
+		$(".cs1").children("a").addClass("chen");
+		$(".cs1").children("a").children('img').attr("src","images/deng/jian.jpg");
+	}else if(chengshi == 1){
+		$(".cs1").children("a").removeClass("chen");
+		$(".cs1").children("a").children('img').attr("src","images/deng/jian-bai.jpg");
+		$(".cs3").children("a").removeClass("chen");
+		$(".cs3").children("a").children('img').attr("src","images/deng/jian-bai.jpg");
+		$(".cs2").children("a").addClass("chen");
+		$(".cs2").children("a").children('img').attr("src","images/deng/jian.jpg");
+	}else if(chengshi == 2){
+		$(".cs1").children("a").removeClass("chen");
+		$(".cs1").children("a").children('img').attr("src","images/deng/jian-bai.jpg");
+		$(".cs2").children("a").removeClass("chen");
+		$(".cs2").children("a").children('img').attr("src","images/deng/jian-bai.jpg");
+		$(".cs3").children("a").addClass("chen");
+		$(".cs3").children("a").children('img').attr("src","images/deng/jian.jpg");
+	} 	
 });
