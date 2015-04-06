@@ -4,6 +4,8 @@ $(document).ready(function(){
 		chengshi = $.getUrlParam("cid");
 	};
 
+
+
 	$.ajax({
 			url: api + "wap/v1/activities/"+$.getUrlParam('id'),
 			type: 'GET',
@@ -11,11 +13,50 @@ $(document).ready(function(){
 			success: function (data){
 				if(data.code && data.code != 0){
 					alert(data.error.msg);
-					
 				}else{
 					console.log(data);
-					alert(data.cook.ads_photo);
-					alert(data.activity.title);
+
+					var imgsTag = "";
+					$.each(data.activity.imgs, function(index, val) {
+						 /* iterate through array or object */
+						 imgsTag += '<img src="'+val+'"/>';
+					});
+
+					$(".by").append('<img class="gr-tou" src="'+data.cook.ads_photo+'"/>'
+						+'<div class="gr-zhiliao">'
+							+'<img class="geren" src="'+data.cook.avatar+'"/>'
+							+'<p class="gr-name"><span>'+data.cook.name+'</span>'+data.cook.cook_rank+'<p>'
+							+'<span class="gr-yuyue">'+data.activity.members_count+'人预约</span>'
+						+'</div>'
+						+'<div class="gr-neirong gr-neirongs">'
+							+'<p class="nr-title">'+data.activity.title+'</p>'
+							+'<div class="nr-xinxi">'
+								+'<p class="xx-title">'+data.activity.activity_desc+'</p>'
+								+imgsTag
+							+'</div>'
+							+'<a class="kankan"><span>展开全部</span><img src="images/deng/jiantou-xia.jpg"/></a>'
+							+'<img class="meng" src="images/deng/meng.png"/>'
+						+'</div>'
+						+'<div class="gr-neirong">'
+							+'<div class="gr-qita">'
+								+'<img src="images/deng/shijian.jpg"/>'
+								+'<span>预约时间：'+data.activity.activity_time+'</span>'
+							+'</div>'
+							+'<div class="gr-qita">'
+								+'<img src="images/deng/didian.jpg"/>'
+								+'<span>预约地点：'+data.activity.address+'</span>'
+							+'</div>'
+							+'<div class="gr-qita">'
+								+'<img class="gr-qitas" src="images/deng/qian.jpg"/>'
+								+'<span>预约单价：'+data.activity.per_fee+'元/次</span>'
+							+'</div>'
+						+'</div>'
+						+'<div class="gr-neirong">'
+							+'<p class="gr-guanyu">关于他</p>'
+							+'<img class="gy-img" src="'+data.cook.detail_photo+'"/>'
+							+'<p class="gy-jieshao">'+data.cook.editor_note+'</p>'
+						+'</div>'
+					);
 				}
 			},
 			error: function (xhr){
@@ -83,7 +124,7 @@ $(document).ready(function(){
 	});
 
 	// 点击看看以后的效果
-	$(".kankan").click(function() {
+	$(".by").on("click",".kankan",function(){
 		if($(this).children("span").text() == "展开全部"){
 			$(this).children("span").text("收起");
 			$(this).children("span").next('img').attr("src","images/deng/jiantou-shang.jpg");

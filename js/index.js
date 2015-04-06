@@ -54,6 +54,12 @@ $(document).ready(function(){
 		}
 	})
 
+	// 点击注册按钮的登录
+	$(".zc-zh a").click(function(){
+		$(".zhuce").fadeOut(500);
+		$(".dls").fadeIn(700);
+	})
+
 	// 选择完右边以后，消失右边
 	$(".fr-li").click(function(){
 		$(".bd").animate({
@@ -100,26 +106,6 @@ $(document).ready(function(){
 	$(".dl-no").click(function() {
 		$(this).parent().parent().fadeOut(700); 
 	});
-
-	// 点击看看以后的效果
-	$(".kankan").click(function() {
-		if($(this).children("span").text() == "展开全部"){
-			$(this).children("span").text("收起");
-			$(this).children("span").next('img').attr("src","images/deng/jiantou-shang.jpg");
-			$(this).children("span").next('img').css("position","relative").css("top","-2px");
-			$(this).css("width","45px").css("left","84%");
-			$(".by .gr-neirongs").css("padding-bottom","25px");
-			$(".by .gr-neirongs").animate({height:'100%'},"slow");
-
-		}else{
-			$(this).children("span").text("展开全部");
-			$(this).css("width","71px").css("left","77%");
-			$(this).children("span").next('img').css("position","relative").css("top","0px");
-			$(this).children("span").next('img').attr("src","images/deng/jiantou-xia.jpg");
-			$(".by .gr-neirongs").css("padding-bottom","10");
-			$(".by .gr-neirongs").animate({height:'134px'},"slow");
-		}
-	})
 
 	// 点击预约效果
 	$(".gr-yy-anniu").click(function() {
