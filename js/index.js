@@ -4,6 +4,34 @@ $(document).ready(function(){
 	var password ="";
 	var chengshi = 0;
 
+	// 城市的按钮样式和图片
+	if ($.getUrlParam("cid")) {
+		chengshi = $.getUrlParam("cid");
+	};
+
+	if(chengshi == 0){
+		$(".cs2").children("a").removeClass("chen");
+		$(".cs2").children("a").children('img').attr("src","images/deng/jian-bai.jpg");
+		$(".cs3").children("a").removeClass("chen");
+		$(".cs3").children("a").children('img').attr("src","images/deng/jian-bai.jpg");
+		$(".cs1").children("a").addClass("chen");
+		$(".cs1").children("a").children('img').attr("src","images/deng/jian.jpg");
+	}else if(chengshi == 1){
+		$(".cs1").children("a").removeClass("chen");
+		$(".cs1").children("a").children('img').attr("src","images/deng/jian-bai.jpg");
+		$(".cs3").children("a").removeClass("chen");
+		$(".cs3").children("a").children('img').attr("src","images/deng/jian-bai.jpg");
+		$(".cs2").children("a").addClass("chen");
+		$(".cs2").children("a").children('img').attr("src","images/deng/jian.jpg");
+	}else if(chengshi == 2){
+		$(".cs1").children("a").removeClass("chen");
+		$(".cs1").children("a").children('img').attr("src","images/deng/jian-bai.jpg");
+		$(".cs2").children("a").removeClass("chen");
+		$(".cs2").children("a").children('img').attr("src","images/deng/jian-bai.jpg");
+		$(".cs3").children("a").addClass("chen");
+		$(".cs3").children("a").children('img').attr("src","images/deng/jian.jpg");
+	} 
+
 	// 首页最上方广告图片
 	$.ajax({
 		url: api + 'wap/v1/ads',
