@@ -60,11 +60,11 @@ $(document).ready(function(){
 	// 左边导航加载
 	getListByCityCode(chengshi);
 	// 鼠标移动的效果
-		$(".by-ul").on("mouseover",".n-li",function(){
+	$(".n-li").on("touchstart",function(){
 		$(this).children().children().next(".sy-neirong").fadeIn(700);
 	})
 
-	$(".by-ul").on("mouseleave",".n-li",function(){
+	$(".n-li").on("touchend",function(){
 		$(this).children().children().next(".sy-neirong").fadeOut(700); 
 	})
 
