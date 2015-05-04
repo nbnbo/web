@@ -59,14 +59,13 @@ $(document).ready(function(){
 
 	// 左边导航加载
 	getListByCityCode(chengshi);
-	// 鼠标移动的效果
-	$(".n-li").on("touchstart",function(){
-		$(this).children().children().next(".sy-neirong").fadeIn(700);
-	})
+	
 
-	$(".n-li").on("touchend",function(){
-		$(this).children().children().next(".sy-neirong").fadeOut(700); 
-	})
+	// $(".n-li").on("swipe",function(){
+	// 	console.log('touchstart');
+	// 	$(this).children().children().next(".sy-neirong").fadeIn(700);
+	// });
+
 
 	function getListByCityCode(code){
 		$.ajax({
@@ -86,6 +85,7 @@ $(document).ready(function(){
 					 	val.remove();
 					 };
 				});
+
 				$.each(data.activity_list, function(index, val) {
 					$(".by-ul").append('<li class="n-li">'
 							+'<a href="indexgr.html?id='+val.activity_id+'&cid='+chengshi+'">'
@@ -102,6 +102,37 @@ $(document).ready(function(){
 						+'</li>'
 					);
 				});
+
+
+				// 鼠标移动的效果
+				$(".n-li").on("touchstart",function(){
+					// console.log('touchstart');
+					//sy-neirong
+					var currentDom = $(this).children().children().next(".sy-neirong");
+					var allLiDom = $('.sy-neirong');
+					var isCurrentSelected = false;
+					$.each(allLiDom,function(index,val){
+						if($(val).find('img').attr('src')==currentDom.find('img').attr('src')){
+							// console.log(val);
+							if($(val).is(':hidden')){
+								isCurrentSelected = false;
+							}else{
+								isCurrentSelected = true;
+							}
+						}else{
+							$(val).hide();
+						}
+					});
+					if(!isCurrentSelected){
+						currentDom.fadeIn(400);
+					}
+					
+				})
+
+				// $(".n-li").on("touchend",function(){
+				// 	// console.log('touchend');
+				// 	$(this).children().children().next(".sy-neirong").fadeOut(700); 
+				// })
 			}
 		},
 		error: function (xhr){
