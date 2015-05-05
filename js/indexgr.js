@@ -34,7 +34,7 @@ $(document).ready(function(){
 	// 	$(".cs3").children("a").addClass("chen");
 	// 	$(".cs3").children("a").children('img').attr("src","images/deng/jian.jpg");
 	// } 	
-
+	var activity_data ;
 	$.ajax({
 		url: api + "wap/v1/activities/"+$.getUrlParam('id'),
 		type: 'GET',
@@ -43,7 +43,7 @@ $(document).ready(function(){
 			if(data.code && data.code != 0){
 				alert(data.error.msg);
 			}else{
-				console.log(data);
+				activity_data = data;
 				var imgsTag = "";
 				if(data.activity.imgs){
 					$.each(data.activity.imgs, function(index, val) {
@@ -51,6 +51,13 @@ $(document).ready(function(){
 						 imgsTag += '<img src="'+val+'"/>';
 					});
 				}
+				var feeHtml = "";
+				if(data.activity.fee_type == 'TotalFee'){
+					feeHtml = '<span>预约总价：'+data.activity.per_fee+'元/次</span>';
+				}else{
+					feeHtml = '<span>预约单价：'+data.activity.per_fee+'元/人</span>';
+				}
+
 				$(".by").append('<img class="gr-tou" src="'+data.cook.ads_photo+'"/>'
 					+'<div class="gr-zhiliao">'
 						+'<img class="geren" src="'+data.cook.avatar+'"/>'
@@ -77,7 +84,7 @@ $(document).ready(function(){
 						+'</div>'
 						+'<div class="gr-qita">'
 							+'<img class="gr-qitas" src="images/deng/qian.jpg"/>'
-							+'<span>预约单价：'+data.activity.per_fee+'元/次</span>'
+							+ feeHtml
 						+'</div>'
 					+'</div>'
 					+'<div class="gr-neirong">'
@@ -113,6 +120,15 @@ $(document).ready(function(){
 
 	// 点击预约效果
 	$(".gr-yy-anniu").click(function() {
+		if(activity_data.activity.fee_type == 'TotalFee'){
+			$(".yuyue").height(160);	
+			$("#yuyue_persons_num").parent().hide();	
+		}else{
+			$(".yuyue").height(200);	
+			$("#yuyue_persons_num").parent().show();
+		}
+
+
 		if($.cookie("yu_session_id") && $.cookie("yu_session_id").length > 0){
 			$(".dl").fadeIn(700);
 			$(".yuyue").fadeIn(700);
@@ -147,18 +163,44 @@ $(document).ready(function(){
 	})
 
 	$(".yy-anniu").click(function(){
-		var name = $(".yy-name").val();
+		
+		var params ;
+		var name = $("#yuyue_name").val();
+		if (name.trim().length==0) {
+			alert("请输入您的姓名");
+			return false;
+		};
+
+		if(activity_data.activity.fee_type == 'TotalFee'){
+			params = {
+				activity_id: $.getUrlParam('id'),
+				session_id: $.cookie("yu_session_id"),
+				name:name
+			};
+		}else{
+			var pCount = $("#yuyue_persons_num").val().trim();
+			if(pCount.length==0 || isNaN(pCount)){
+				alert("请输入您预约的人数");
+				return false;
+			};
+
+			params = {
+				activity_id: $.getUrlParam('id'),
+				session_id: $.cookie("yu_session_id"),
+				name:name,
+				count:pCount
+			};
+		}
+
+		
+
+
 		$.ajax({
 			url: api + "wap/v1/users/subscribe",
 			type: 'POST',
 			dataType: 'json',
-			data: {
-				activity_id: $.getUrlParam('id'),
-				session_id: $.cookie("yu_session_id"),
-				name:name
-			},
+			data: params,
 			success: function (data){
-				console.log(data);
 				if(data.code && data.code != 0){
 					alert(data.error.msg);
 				}else{

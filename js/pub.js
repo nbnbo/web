@@ -234,7 +234,7 @@ $(document).ready(function(){
 			success: function (data){
 				if(data.code && data.code != 0){
 					alert(data.error.msg);
-					console.log(data);
+					// console.log(data);
 				}else{
 					$.cookie("yu_session_id",data.user.session_id); 
 					$(".dl").fadeOut(500);

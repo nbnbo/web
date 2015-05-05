@@ -312,7 +312,7 @@ ul{
 		top: 15%;
 		left: 10px;
 		width: 300px;
-		height: 145px;
+		height: 200px;
 		background:#FFF;
 		border-radius: 8px;
 		display: none;
@@ -896,7 +896,7 @@ ul{
 		top: 15%;
 		left: 10px;
 		width: 340px;
-		height: 145px;
+		height: 200px;
 		background:#FFF;
 		border-radius: 8px;
 		display: none;
@@ -966,7 +966,7 @@ ul{
 	.yy-anniu{
 		position: absolute;
 		bottom: 15px;
-		left: 108px;
+		left: 118px;
 		border-radius: 4px;
 		border: 1px solid #fe5d1f;
 		padding: 6px 24px;
@@ -1483,7 +1483,7 @@ ul{
 		top: 15%;
 		left: 10px;
 		width: 355px;
-		height: 145px;
+		height: 200px;
 		background:#FFF;
 		border-radius: 8px;
 		display: none;
@@ -1553,7 +1553,7 @@ ul{
 	.yy-anniu{
 		position: absolute;
 		bottom: 15px;
-		left: 108px;
+		left: 128px;
 		border-radius: 4px;
 		border: 1px solid #fe5d1f;
 		padding: 6px 24px;
@@ -2065,12 +2065,12 @@ ul{
 		height: 138px;
 		overflow: hidden;
 	}
-		.yuyue{
+	.yuyue{
 		position: absolute;
 		top: 15%;
 		left: 10px;
 		width: 365px;
-		height: 145px;
+		height: 200px;
 		background:#FFF;
 		border-radius: 8px;
 		display: none;
@@ -2140,7 +2140,7 @@ ul{
 	.yy-anniu{
 		position: absolute;
 		bottom: 15px;
-		left: 108px;
+		left: 138px;
 		border-radius: 4px;
 		border: 1px solid #fe5d1f;
 		padding: 6px 24px;
@@ -2660,12 +2660,12 @@ ul{
 		height: 138px;
 		overflow: hidden;
 	}
-		.yuyue{
+	.yuyue{
 		position: absolute;
 		top: 15%;
 		left: 10px;
 		width: 394px;
-		height: 145px;
+		height: 200px;
 		background:#FFF;
 		border-radius: 8px;
 		display: none;
@@ -2735,7 +2735,7 @@ ul{
 	.yy-anniu{
 		position: absolute;
 		bottom: 15px;
-		left: 108px;
+		left: 148px;
 		border-radius: 4px;
 		border: 1px solid #fe5d1f;
 		padding: 6px 24px;
