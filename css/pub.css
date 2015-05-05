@@ -1,7 +1,7 @@
 
 @media (min-width: 1px) and (max-width: 359px){
 	.dl{
-		position: fixed;
+		position: absolute;
 		top: 0px;
 		left: 0px;
 		width: 100%;
@@ -13,7 +13,7 @@
 
 	.dls{
 		position: absolute;
-		top: 20%;
+		top: 80px;
 		left: 10px;
 		width: 300px;
 		height: 200px;
@@ -105,7 +105,7 @@
 
 	.zhuce{
 		position: absolute;
-		top: 15%;
+		top: 80px;
 		left: 10px;
 		width: 300px;
 		height: 280px;
@@ -240,7 +240,7 @@
 
 @media (min-width: 360px) and (max-width: 374px){
 	.dl{
-		position: fixed;
+		position: absolute;
 		top: 0px;
 		left: 0px;
 		width: 100%;
@@ -252,7 +252,7 @@
 
 	.dls{
 		position: absolute;
-		top: 20%;
+		top: 80px;
 		left: 20px;
 		width: 320px;
 		height: 200px;
@@ -345,7 +345,7 @@
 
 	.zhuce{
 		position: absolute;
-		top: 20%;
+		top: 80px;
 		left: 20px;
 		width: 320px;
 		height: 280px;
@@ -481,7 +481,7 @@
 
 @media (min-width: 375px) and (max-width: 383px){
 	.dl{
-		position: fixed;
+		position: absolute;
 		top: 0px;
 		left: 0px;
 		width: 100%;
@@ -493,7 +493,7 @@
 
 	.dls{
 		position: absolute;
-		top: 20%;
+		top: 80px;
 		left: 20px;
 		width: 335px;
 		height: 200px;
@@ -586,7 +586,7 @@
 
 	.zhuce{
 		position: absolute;
-		top: 20%;
+		top: 80px;
 		left: 20px;
 		width: 335px;
 		height: 280px;
@@ -722,7 +722,7 @@
 
 @media (min-width: 384px) and (max-width: 413px){
 .dl{
-		position: fixed;
+		position: absolute;
 		top: 0px;
 		left: 0px;
 		width: 100%;
@@ -734,7 +734,7 @@
 
 	.dls{
 		position: absolute;
-		top: 20%;
+		top: 80px;
 		left: 20px;
 		width: 345px;
 		height: 200px;
@@ -827,7 +827,7 @@
 
 	.zhuce{
 		position: absolute;
-		top: 20%;
+		top: 80px;
 		left: 20px;
 		width: 345px;
 		height: 280px;
@@ -964,7 +964,7 @@
 
 @media (min-width: 414px){
 	.dl{
-		position: fixed;
+		position: absolute;
 		top: 0px;
 		left: 0px;
 		width: 100%;
@@ -976,7 +976,7 @@
 
 	.dls{
 		position: absolute;
-		top: 15%;
+		top: 80px;
 		left: 20px;
 		width: 370px;
 		height: 250px;
@@ -1073,7 +1073,7 @@
 
 	.zhuce{
 		position: absolute;
-		top: 15%;
+		top: 80px;
 		left: 20px;
 		width: 370px;
 		height: 300px;
