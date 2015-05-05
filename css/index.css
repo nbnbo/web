@@ -23,6 +23,16 @@ ul{
 	list-style:none; 
 }
 
+
+.footer{
+	text-align: center;
+	background: #666;
+	color: #FFF;
+}
+.footer-content{
+	text-align: center;
+	background: #666;
+}
 /*320px*/
 @media (min-width: 1px) and (max-width: 359px){
 	body{
